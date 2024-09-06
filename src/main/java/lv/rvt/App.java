@@ -36,7 +36,7 @@ public class App
         System.out.println("Ieavadi savu grupu: ");
         String group = scanner.nextLine();
 
-        System.out.println("Students: " + " " + name + " " +  lastname + " grupa: " + group);
+        System.out.println("Students: " + name + " " +  lastname + ", grupa: " + group);
 
     }
 
