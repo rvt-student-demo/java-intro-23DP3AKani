@@ -25,18 +25,38 @@ public class App
         // System.out.println("a program");
         // System.out.println(name, age, isOnline);
 
+
+        // System.out.println("Ieavadi savu vārdu: ");
+        // String name = scanner.nextLine();
+
+        // System.out.println("Ieavdi savu uzvārdu: ");
+        // String lastname = scanner.nextLine();
+
+        // System.out.println("Ieavadi savu grupu: ");
+        // String group = scanner.nextLine();
+
+        // System.out.println("Students: " + name + " " +  lastname + ", grupa: " + group);
+        
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ieavadi savu vārdu: ");
-        String name = scanner.nextLine();
+        System.out.println("Give the first number: ");
+        int first_number = Integer.valueOf(scanner.nextLine());
 
-        System.out.println("Ieavdi savu uzvārdu: ");
-        String lastname = scanner.nextLine();
+        System.out.println("Give the second number: ");
+        int second_number = Integer.valueOf(scanner.nextLine());
 
-        System.out.println("Ieavadi savu grupu: ");
-        String group = scanner.nextLine();
+        int plus = first_number + second_number;
+        int minus = first_number - second_number;
+        int multiply = first_number * second_number;
+        double division = (double) first_number / second_number;
 
-        System.out.println("Students: " + name + " " +  lastname + ", grupa: " + group);
+        System.out.println(first_number + " + " + second_number + " = " + plus);
+        System.out.println(first_number + " - " + second_number + " = " + minus);
+        System.out.println(first_number + " * " + second_number + " = " + multiply);
+        System.out.println(first_number + " / " + second_number + " = " + division);
+
+
 
     }
 
