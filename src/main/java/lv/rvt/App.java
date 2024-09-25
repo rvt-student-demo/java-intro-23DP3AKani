@@ -6,29 +6,29 @@ public class App
 {
     public static void main( String[] args )
     {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Give points [0-100]:");
-        int speedInp = Integer.valueOf(scanner.nextLine());
-
-        if (speedInp < 0) {
-            System.out.println("impossible!");
-        } else if (speedInp < 50) {
-            System.out.println("failed");
-        } else if (speedInp < 60) {
-            System.out.println("1");
-        } else if (speedInp < 70) {
-            System.out.println("2");
-        } else if (speedInp < 80) {
-            System.out.println("3");
-        } else if (speedInp < 90) {
-            System.out.println("4");
-        } else if (speedInp < 101) {
-            System.out.println("5");
-        } else if (speedInp > 100) {
-            System.out.println("incredible!");
-        }
+        Scanner reader = new Scanner(System.in);
         
+        System.out.println("Value of the gift?");
+        int number = Integer.valueOf(reader.nextLine());
+
+        if (number < 5000) {
+            System.out.println("No tax!");
+        }
+        else if (number > 4999 && number < 25001) {
+            System.out.println("Tax: " + (100 + (number - 5000) * 0.08));
+        }
+        else if (number > 24999 && number < 55001) {
+            System.out.println("Tax: " + (1700 + (number - 25000) * 0.10));
+        }
+        else if (number > 54999 && number < 200001) {
+            System.out.println("Tax: " + (4700 + (number - 55000) * 0.12));
+        }
+        else if (number > 199999 && number < 1000001) {
+            System.out.println("Tax: " + (22100 + (number - 200000) * 0.15));
+        }
+        else if (number > 999999) {
+            System.out.println("Tax: " + (142100 + (number - 1000000) * 0.17));
+        }
     }
 
 }
