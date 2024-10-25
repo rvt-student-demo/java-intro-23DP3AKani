@@ -9,7 +9,9 @@ public class App
     public static void main( String[] args ) {
         //Stars.printTriangle(4);
         //Third_element();
-        Second_plus_third();
+        //Second_plus_third();
+       // Stars.christmasTree(4);
+        Only_this_numbers();
     }
     
     public static void divisibleByThreeInRange_simple() {
@@ -65,5 +67,32 @@ public class App
 
         System.out.println(second_num + third_num);
         
+    }
+
+    public static void Only_this_numbers() {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+
+        int num = 0;
+        System.out.println();
+        while (num != -1) {
+            num = Integer.valueOf(scanner.nextLine());
+            numbers.add(num);
+        }
+
+        System.out.println("From where?");
+        int startIndex = Integer.valueOf(scanner.nextLine());
+        System.out.println("To where?");
+        int endIndex = Integer.valueOf(scanner.nextLine());
+
+        if ( endIndex > numbers.size() - 1 || startIndex < 0 ) {
+            System.out.println("Out of list range");
+        }
+
+        System.out.println();
+        for ( int i = startIndex; i <= endIndex; i++ ) {
+            int result = numbers.get(i);
+            System.out.println(result);
+        }
     }
 }
