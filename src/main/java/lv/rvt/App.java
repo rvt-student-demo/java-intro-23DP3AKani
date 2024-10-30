@@ -13,7 +13,8 @@ public class App
         //Second_plus_third();
         //Stars.christmasTree(4);
         //Only_this_numbers();
-        Array_ar_rndm_numbers();
+        //Array_ar_rndm_numbers();
+        Bubble_sort();
     }
     
     public static void divisibleByThreeInRange_simple() {
@@ -128,5 +129,25 @@ public class App
         System.out.println();
         System.out.println("Avarage:" + summ/10);
 
+    }
+
+    public static void Bubble_sort() {
+        int numbers[] = {4, 1, 5, 3, 9, 8, 6, 2, 7, 0};
+
+        int length = numbers.length;
+
+        for ( int i = 0; i < length; i++ ) {
+            for ( int j = 0; j < length - 1; j++ ) {
+                if ( numbers[j] > numbers[j + 1] ) {
+                    int temp = numbers[j];
+                    numbers[j] = numbers[j + 1];
+                    numbers[j + 1] = temp;
+                }
+            }
+        }
+
+        for ( int i = 0; i < length; i++ ) {
+            System.out.print(numbers[i] + " ");
+        }
     }
 }
