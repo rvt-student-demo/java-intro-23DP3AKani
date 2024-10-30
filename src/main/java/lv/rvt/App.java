@@ -2,6 +2,7 @@ package lv.rvt;
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Random;
 
 
 public class App 
@@ -10,8 +11,9 @@ public class App
         //Stars.printTriangle(4);
         //Third_element();
         //Second_plus_third();
-       // Stars.christmasTree(4);
-        Only_this_numbers();
+        //Stars.christmasTree(4);
+        //Only_this_numbers();
+        Array_ar_rndm_numbers();
     }
     
     public static void divisibleByThreeInRange_simple() {
@@ -94,5 +96,37 @@ public class App
             int result = numbers.get(i);
             System.out.println(result);
         }
+    }
+
+    public static void Array_ar_rndm_numbers() {
+        Random random = new Random();
+        
+        int[] numbers = new int[10];
+        for ( int i = 0; i < numbers.length; i++ ) { //fill array with random elements
+            int randomNum = random.nextInt(11);
+            numbers[i] = randomNum;
+        }
+
+        int min = numbers[0];
+        int max = numbers[0];
+        int summ = 0;
+        for ( int i = 0; i < numbers.length; i++ ) { //searching for min and max elements
+            System.out.print(numbers[i] + " "); //printing the array
+            summ += numbers[i];
+
+            if ( numbers[i] < min ) {
+                min = numbers[i];
+            }
+
+            else if ( numbers[i] > max) {
+                max = numbers[i];
+            }
+        }
+        System.out.println();
+        System.out.println("Min:" + min);
+        System.out.println("Max:" + max);
+        System.out.println();
+        System.out.println("Avarage:" + summ/10);
+
     }
 }
