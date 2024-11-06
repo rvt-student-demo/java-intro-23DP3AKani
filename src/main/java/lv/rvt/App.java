@@ -8,13 +8,24 @@ import java.util.Random;
 public class App 
 {
     public static void main( String[] args ) {
+        Account myObj1 = new Account("Matthews account", 1000);
+        Account myObj2 = new Account("My account", 0);
+
+        myObj1.withdraw(100);
+        myObj2.deposit(100);
+
+        myObj1.toString();
+        myObj2.toString();
+
+        
         //Stars.printTriangle(4);
         //Third_element();
         //Second_plus_third();
         //Stars.christmasTree(4);
         //Only_this_numbers();
         //Array_ar_rndm_numbers();
-        Bubble_sort();
+        //Bubble_sort();
+        //Personal_details();
     }
     
     public static void divisibleByThreeInRange_simple() {
@@ -132,6 +143,7 @@ public class App
     }
 
     public static void Bubble_sort() {
+
         int numbers[] = {4, 1, 5, 3, 9, 8, 6, 2, 7, 0};
 
         int length = numbers.length;
@@ -150,4 +162,56 @@ public class App
             System.out.print(numbers[i] + " ");
         }
     }
+
+    public static void Personal_details() {
+        Scanner scanner = new Scanner(System.in);
+        boolean loop = true;
+        
+        ArrayList<String> dataNames = new ArrayList<>();
+        ArrayList<Integer> dataBirthdays = new ArrayList<>();
+
+        while (loop != false) {
+            String dataPerson = scanner.nextLine();
+            String[] dataLocal = dataPerson.split(",");
+
+            if ( dataPerson.isEmpty() ) {
+                loop = false;
+            }
+            else {
+                dataNames.add(dataLocal[0]);
+                //dataBirthdays.add();
+            }
+        }
+
+    }
+
+    public static class Account {
+        private double balance;
+            private String owner;
+            
+            public Account(String owner, double balance) {
+                this.balance = balance;
+                this.owner = owner;
+            }
+            
+            public void deposit(double amount) {
+                this.balance = this.balance + amount;
+            }
+    
+            public void withdraw(double amount) {
+                this.balance = this.balance - amount;
+            }
+    
+            public double balance() {
+                return this.balance;
+            }
+    
+            @Override
+            public String toString() {
+                return this.owner + " balance: " + this.balance;
+            }
+    }
+
+
+
 }
