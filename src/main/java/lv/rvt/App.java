@@ -8,6 +8,7 @@ import java.util.Random;
 public class App 
 {
     public static void main( String[] args ) {
+        // Account class
         Account myObj1 = new Account("Matthews account", 1000);
         Account myObj2 = new Account("My account", 0);
 
@@ -16,8 +17,15 @@ public class App
 
         myObj1.toString();
         myObj2.toString();
-
         
+        // Person class
+        Person ada = new Person("Ada", 18);
+        ada.printPerson();
+        
+        // Product class
+        Product banana = new Product("Banana", 1.1, 13);
+        banana.printProduct();
+
         //Stars.printTriangle(4);
         //Third_element();
         //Second_plus_third();
@@ -184,34 +192,5 @@ public class App
         }
 
     }
-
-    public static class Account {
-        private double balance;
-            private String owner;
-            
-            public Account(String owner, double balance) {
-                this.balance = balance;
-                this.owner = owner;
-            }
-            
-            public void deposit(double amount) {
-                this.balance = this.balance + amount;
-            }
-    
-            public void withdraw(double amount) {
-                this.balance = this.balance - amount;
-            }
-    
-            public double balance() {
-                return this.balance;
-            }
-    
-            @Override
-            public String toString() {
-                return this.owner + " balance: " + this.balance;
-            }
-    }
-
-
 
 }
