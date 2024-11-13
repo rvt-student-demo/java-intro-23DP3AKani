@@ -58,6 +58,23 @@ public class App
         System.out.println("Sum: " + statistics.sum());
         System.out.println("Average: " + statistics.average());
 
+        // Payment Card class
+        PaymentCard paulsCard = new PaymentCard(20);
+        PaymentCard mattsCard = new PaymentCard(30);
+        paulsCard.eatHeartily();
+        mattsCard.eatAffordably();
+        System.out.println(paulsCard.toString());
+        System.out.println(mattsCard.toString());
+        paulsCard.addMoney(20);
+        mattsCard.eatHeartily();
+        System.out.println(paulsCard.toString());
+        System.out.println(mattsCard.toString());
+        paulsCard.eatAffordably();
+        paulsCard.eatAffordably();
+        mattsCard.addMoney(50);
+        System.out.println(paulsCard.toString());
+        System.out.println(mattsCard.toString());
+
         //Stars.printTriangle(4);
         //Third_element();
         //Second_plus_third();
