@@ -19,8 +19,17 @@ public class App
         myObj2.toString();
         
         // Person class
-        Person ada = new Person("Ada", 18);
-        ada.printPerson();
+        Person matti = new Person("Matti");
+        Person juhana = new Person("Juhana");
+
+        matti.setHeight(180);
+        matti.setWeight(86);
+
+        juhana.setHeight(175);
+        juhana.setWeight(64);
+
+        System.err.println(matti.toString());
+        System.err.println(juhana.toString());
         
         // Product class
         Product banana = new Product("Banana", 1.1, 13);
@@ -37,6 +46,17 @@ public class App
 
         counter.decrement();
         counter.printValue();
+
+        // Statistics class
+        System.out.println();
+        Statistics statistics = new Statistics();
+        statistics.addNumber(3);
+        statistics.addNumber(5);
+        statistics.addNumber(1);
+        statistics.addNumber(2);
+        System.out.println("Count: " + statistics.getCount());
+        System.out.println("Sum: " + statistics.sum());
+        System.out.println("Average: " + statistics.average());
 
         //Stars.printTriangle(4);
         //Third_element();
