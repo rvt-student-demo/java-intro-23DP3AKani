@@ -5,13 +5,12 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
-public class App 
-{
+public class App {
     public static void main( String[] args ) {
         // Account class
         Account myObj1 = new Account("Matthews account", 1000);
         Account myObj2 = new Account("My account", 0);
-
+    
         myObj1.withdraw(100);
         myObj2.deposit(100);
 
@@ -83,28 +82,28 @@ public class App
         //    clock.advance();
         //}
 
-        Timer timer = new Timer();
+        //Timer timer = new Timer();
 
-        while (true) {
-            System.out.println(timer);
-            timer.advance();
+        //while (true) {
+        //    System.out.println(timer);
+        //    timer.advance();
 
-            try {
-                Thread.sleep(10);
-            } catch (Exception e) {
+        //    try {
+        //         Thread.sleep(10);
+        //    } catch (Exception e) {
+        //
+        //    }
+        //}
 
-            }
-        }
-        //Clock class
-        //Stars.printTriangle(4);
-        //Third_element();
-        //Second_plus_third();
-        //Stars.christmasTree(4);
-        //Only_this_numbers();
-        //Array_ar_rndm_numbers();
-        //Bubble_sort();
-        //Personal_details();
+        Product tapeMeasure = new Product("Tape measure");
+        Product plaster = new Product("Plaster", "home improvement section");
+        Product tyre = new Product("Tyre", 5);
+
+        tapeMeasure.printProduct();
+        plaster.printProduct();
+        tyre.printProduct();
     }
+
     
     public static void divisibleByThreeInRange_simple() {
         Scanner scanner = new Scanner(System.in);
@@ -262,5 +261,4 @@ public class App
         }
 
     }
-
 }
