@@ -75,6 +75,27 @@ public class App
         System.out.println(paulsCard.toString());
         System.out.println(mattsCard.toString());
 
+        //Clock class
+        //Clock clock = new Clock();
+
+        //while (true) {
+        //    System.out.println(clock);
+        //    clock.advance();
+        //}
+
+        Timer timer = new Timer();
+
+        while (true) {
+            System.out.println(timer);
+            timer.advance();
+
+            try {
+                Thread.sleep(10);
+            } catch (Exception e) {
+
+            }
+        }
+        //Clock class
         //Stars.printTriangle(4);
         //Third_element();
         //Second_plus_third();
